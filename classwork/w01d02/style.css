@@ -1,0 +1,67 @@
+body {
+	color: red;
+}
+
+h1 {
+	color: aquamarine;
+	font-family: helvetica;
+
+}
+
+p {
+	font-size: 20px;
+}
+.special{
+	text-decoration: underline;	
+}
+
+#name {
+	font-weight: bold;
+}
+
+#boring{
+	text-decoration: none;
+}
+
+li.special{
+	color: pink;
+}
+
+/* li.special turns all li components with the class special to pink */
+
+ul li{
+	font-size: 50px;
+}
+
+/* all li in ul are now size 50px  ul > li {} only works for li's that are 1 layer down does not work if 2 layers*/
+
+section:nth-child(2) {
+	background-color: grey;
+}
+/* Layout*/
+header{
+	border: 20px solid red;
+}
+
+main{
+	border:20px solid blue	;
+}
+footer{
+	border: 20px solid blue;
+}
+
+section{
+	padding: 20px;
+	margin: 20px;
+	width: 400px;
+	height: 250px;
+	display: inline-block;
+	float: left;
+}
+
+aside{
+	background-color: green;
+	width: 200px;
+	height: 500px;
+	display: inline-block;
+}

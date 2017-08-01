@@ -1,0 +1,40 @@
+h1{
+	text-decoration: underline;
+	color: red;
+	font-weight: bold;
+	font-family: sans-serif;
+	font-size: 80px;
+}
+
+section{
+	color: purple;
+	font-family: serif;
+	font-size: 30px
+}
+
+ul li a{
+	color: pink;
+	font-family: fantasy;
+	font-size: 40px;
+}
+
+.class1{
+	color:blue;
+	font-family: cursive;
+	font-size: 30px;
+}
+
+#id1{
+	color: green;
+	font-family: monospace;
+	font-size: 40px;
+}
+
+img{
+	height: 160px;
+	width:200px;
+}
+
+a{
+	text-decoration: none;
+}

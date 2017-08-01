@@ -1,0 +1,67 @@
+
+h1 {
+
+	border: 2px solid blue;
+}
+
+h2 {
+
+	border: 2px solid blue;
+}
+header section p{
+	display: inline-block;
+	border: 2px solid black;
+	width: 400px;
+	margin: 20px;
+}
+
+aside{
+	border: 2px solid blue;
+	width:200px;
+	height:500px;
+	display: inline-block;
+
+}
+
+.section1 {
+	float: right;
+	display: inline-block;
+	width: 85%;
+	height: 500px;
+
+}
+
+.section2 {
+	height: 162px;
+	border: 2px solid blue;
+}
+
+#navigation{
+	border: 2px solid blue;
+}
+
+img {
+	float: right;
+	display: inline-block;
+	width: 240px;
+	height: 80px;
+	margin: 15px;
+
+}
+
+article{
+	border: 2px solid blue;
+	height:80px;
+}
+
+footer{
+	border: 2px solid blue;
+
+}
+
+#footimg{
+	float: left;
+	display: inline-block;
+	width: 240px;
+	height: 80px;
+}
