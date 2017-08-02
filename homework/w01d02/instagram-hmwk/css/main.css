@@ -20,6 +20,8 @@ aside{
 	display: inline-block;
 	float:left;
 	margin-left: 20px; 
+	position: relative;
+	left: 120px;
 }
 
 h1{
@@ -31,12 +33,15 @@ h1{
 
 main{
 	background-color: white;
+	border-radius: 10px;
+
 	
 
 }
 
 footer{
 	color: #1c5380;
+
 
 
 }
@@ -46,6 +51,7 @@ footer{
 	float:left;
 	padding: 20px;
 	margin-bottom: -40px;
+	font-size: 15px;
 
 }
 
@@ -57,8 +63,11 @@ ul {
 	width: 400px;
 	height: 500px;
 	display: inline-block;
-
+	position: relative;
+	left: -80px;
 }
+
+
 
 .button {
   padding: 10px 15px;
@@ -70,6 +79,17 @@ ul {
   background-color: #5DBCD2;
   border: 1px solid #1c5380;
   border-radius: 10px;
-  margin-top: 40px;
+  position: absolute;
 
+}
+
+header{
+	position: relative;
+	left:-100px;
+}
+
+footer{
+	position: relative;
+	top:-140px;
+	left: 200px;
 }
