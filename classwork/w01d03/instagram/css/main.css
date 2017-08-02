@@ -1,0 +1,111 @@
+/*
+Colors to use:
+dark blue: #06365f
+light blue: #1c5380
+*/
+
+/**{
+	border: 2px solid black;
+	box-sizing: border-box;
+}*/
+
+body {
+	/*set the background color to be white*/
+	background-color: #fff;
+  	font: 200 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	margin: 0;
+  	/*repeat the image to make the background*/
+  	background-image: url("../images/bgtile.png");
+  	/*repeats images sideways due to x, use y to repeat down*/
+    background-repeat: repeat-x;
+}
+
+
+#container{
+	/*moves the elements inside the container to the middle*/
+	margin: 90px auto 0 auto;
+	/*margin pixles top  right bot left*/
+	/*left and right is auto to center it with even left and right pixles*/
+	width: 880px;
+	/*width of the container*/
+}
+
+section#left{
+	/*Only applies to the section with the left id*/
+	/*display: inline-block;*/
+	float:left;
+	/*makes this section inline with the other section and have it floating to the left*/
+	/*height:80%;*/
+	/*the height of the section is the percentage to the container*/
+}
+
+section#right{
+	/*display: inline-block;*/
+	float: right;
+	/*height:80%;*/
+	width: 550px;
+	/*same as the left in height but for right section*/
+}
+
+section{
+	/*since both the section contains similar commands just apply the commands once in tsections to avoid repeats*/
+	display: inline-block;
+
+}
+
+main{
+	/*main uses the white background frame*/
+	background-image: url(../images/frame.png);
+	/*stops the background image from repeating*/
+	background-repeat: no-repeat;
+	/*covers the whole background of the element with the picture*/
+	background-size: contain;
+	/*cover - cover whole container stretch the img*/
+	/*contain - contains the background image*/ 
+	padding: 40px;
+
+}
+
+h2{
+	color:#06365f;
+	/*pushes the elemnt up by getting rid of the margin top*/
+	margin-top:0;
+}
+
+#badges img{
+	/*pushes a right space of 10px for the images*/
+	margin-right: 10px;
+}
+
+footer{
+	display: inline-block;
+	clear: both;
+	/*clear: both pushes the element under the float items*/
+	width:100%;
+	text-align: center;
+	/*centers the footer text*/
+}
+
+ul{
+	list-style: none;
+	/*gets rid of the style of the list*/
+	display: inline-block;
+	text-align: center;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+li{
+	display: inline;
+	/*makes the list in line instead of listing*/
+	text-transform: uppercase;
+	/*all text in uppercase*/
+	font-weight: bold;
+	margin: 0 10px;
+	font-size: 11px;
+	color: #1c5380;
+}
+
+#grey{
+	color:#999;
+}
