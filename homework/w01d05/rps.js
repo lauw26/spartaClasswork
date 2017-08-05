@@ -13,7 +13,7 @@ while((playerWon<3)&&(compWon<3))
 	switch(result){
 		case "win":
 			playerWon += 1;
-			alert("");
+			alert("You win!\n" + userChoice + " beats " + compChoice + "\nCurrent score player: " + playerWon + " computer: " + compWon);
 		break;
 		case "lose":
 			compWon += 1;
