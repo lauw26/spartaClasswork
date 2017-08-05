@@ -5,7 +5,7 @@ var comp = ["rock","paper","scissor","lizard","spock"]
 alert("Hello!")
 while((playerWon<3)&&(compWon<3))
 {
-	var userChoice = prompt("Please enter the first letter  in lower case of your choice e.g. sp for spock");
+	var userChoice = prompt("Please enter your choice in lower case e.g. rock");
 	//Maths.random will pick a random number, Maths.floor will round the floating point number.
 	var compChoice = comp[Math.floor(Math.random() * 5)];
 	var result = decide(userChoice,compChoice);
@@ -13,12 +13,13 @@ while((playerWon<3)&&(compWon<3))
 	switch(result){
 		case "win":
 			playerWon += 1;
+			alert("");
 		break;
 		case "lose":
 			compWon += 1;
 		break;
 		case "tie"
-			
+
 		break;
 		default:
 	}
@@ -30,7 +31,7 @@ while((playerWon<3)&&(compWon<3))
 function decide(userChoice,compChoice)
 {
 	switch(userChoice){
-		case "r":
+		case "rock":
 				switch(compChoice){
 					case "rock":
 						return "tie"
@@ -53,7 +54,7 @@ function decide(userChoice,compChoice)
 					break;
 				}
 		break;
-		case "p":
+		case "paper":
 				switch(compChoice){
 					case "rock":
 						return "win"
@@ -76,7 +77,7 @@ function decide(userChoice,compChoice)
 					break;
 				}
 		break;
-		case "s":
+		case "scissor":
 				switch(compChoice){
 					case "rock":
 						return "lose"
@@ -99,7 +100,7 @@ function decide(userChoice,compChoice)
 					break;
 				}
 		break;
-		case "l":
+		case "lizard":
 				switch(compChoice){
 					case "rock":
 						return "lose"
@@ -122,7 +123,7 @@ function decide(userChoice,compChoice)
 					break;
 				}
 		break;
-		case "sp":
+		case "spock":
 				switch(compChoice){
 					case "rock":
 						return "win"
