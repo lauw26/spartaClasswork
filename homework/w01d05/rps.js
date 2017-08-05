@@ -12,13 +12,13 @@ while((playerWon<3)&&(compWon<3))
 	//Using the result to find outcome
 	switch(result){
 		case "win":
-
+			playerWon += 1;
 		break;
 		case "lose":
-
+			compWon += 1;
 		break;
 		case "tie"
-
+			
 		break;
 		default:
 	}
