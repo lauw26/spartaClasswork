@@ -24,7 +24,12 @@ while((playerWon<3)&&(compWon<3))
 		break;
 		default: alert(result)
 	}
-
+}
+//Determine the overall winner of the 5 matches
+if(playerWon>compWon){
+	alert("Congratulations you win!\n Final score Player "+ playerWon + " computer: " + compWon)
+}else{
+	alert("Better luck next time You lost!!\n Final score Player "+ playerWon + " computer: " + compWon)
 }
 
 // Function used to determine winner of round
