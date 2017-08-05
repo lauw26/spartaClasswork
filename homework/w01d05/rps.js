@@ -1,6 +1,6 @@
 var playerWon = 0;
 var compWon = 0;
-var comp = ["r","p","s","l","sp"]
+var comp = ["rock","paper","scissor","lizard","spock"]
 //While loop used for best of 5 so first player to get 3 round wins, wins overall
 alert("Hello!")
 while((playerWon<3)&&(compWon<3))
@@ -20,35 +20,121 @@ while((playerWon<3)&&(compWon<3))
 function decide(userChoice,compChoice)
 {
 	switch(userChoice){
-
 		case "r":
 				switch(compChoice){
-
-					case "r":
+					case "rock":
 						return "tie"
 					break;
 
-					case "p":
+					case "paper":
 						return "lose"
 					break;
 
-					case "s":
+					case "scissor":
 						return "win"
 					break;
 
-					case "l":
+					case "lizard":
 						return "win"
 					break;
 
-					case "sp":
+					case "spock":
 						return "lose"
 					break;
-
-
 				}
 		break;
+		case "p":
+				switch(compChoice){
+					case "rock":
+						return "win"
+					break;
 
+					case "paper":
+						return "tie"
+					break;
 
+					case "scissor":
+						return "lose"
+					break;
 
+					case "lizard":
+						return "lose"
+					break;
+
+					case "spock":
+						return "win"
+					break;
+				}
+		break;
+		case "s":
+				switch(compChoice){
+					case "rock":
+						return "lose"
+					break;
+
+					case "paper":
+						return "win"
+					break;
+
+					case "scissor":
+						return "tie"
+					break;
+
+					case "lizard":
+						return "win"
+					break;
+
+					case "spock":
+						return "lose"
+					break;
+				}
+		break;
+		case "l":
+				switch(compChoice){
+					case "rock":
+						return "lose"
+					break;
+
+					case "paper":
+						return "win"
+					break;
+
+					case "scissor":
+						return "lose"
+					break;
+
+					case "lizard":
+						return "tie"
+					break;
+
+					case "spock":
+						return "win"
+					break;
+				}
+		break;
+		case "sp":
+				switch(compChoice){
+					case "rock":
+						return "win"
+					break;
+
+					case "paper":
+						return "lose"
+					break;
+
+					case "scissor":
+						return "win"
+					break;
+
+					case "lizard":
+						return "lose"
+					break;
+
+					case "spock":
+						return "tie"
+					break;
+				}
+		break;
+		default: return "Invalid input"		
 	}
 }
