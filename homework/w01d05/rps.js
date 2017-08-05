@@ -30,12 +30,14 @@ do
 	}
 	//Determine the overall winner of the 5 matches
 	if(playerWon>compWon){
-		alert("Congratulations you win!\n Final score Player "+ playerWon + " computer: " + compWon);
+		alert("Congratulations you win!\n Final score player: "+ playerWon + " computer: " + compWon);
 	}else{
-		alert("Better luck next time You lost!\n Final score Player "+ playerWon + " computer: " + compWon);
+		alert("Better luck next time You lost!\n Final score player: "+ playerWon + " computer: " + compWon);
 	}
 
 	replay = prompt("Play again? y/n");
+	playerWon = 0;
+	compWon = 0;
 }while(replay == "y")
 // Function used to determine winner of round
 
