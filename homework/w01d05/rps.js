@@ -22,7 +22,7 @@ while((playerWon<3)&&(compWon<3))
 		case "tie":
 			alert("Tie!\n" + userChoice + " ties against " + compChoice + "\nCurrent score player: " + playerWon + " computer: " + compWon);
 		break;
-		default:
+		default: alert(result)
 	}
 
 }
