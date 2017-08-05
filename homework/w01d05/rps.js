@@ -17,9 +17,10 @@ while((playerWon<3)&&(compWon<3))
 		break;
 		case "lose":
 			compWon += 1;
+			alert("You lose!\n" + userChoice + " loses against " + compChoice + "\nCurrent score player: " + playerWon + " computer: " + compWon);
 		break;
-		case "tie"
-
+		case "tie":
+			alert("Tie!\n" + userChoice + " ties against " + compChoice + "\nCurrent score player: " + playerWon + " computer: " + compWon);
 		break;
 		default:
 	}
