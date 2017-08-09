@@ -2,7 +2,8 @@
 // Variables defined in global scope, not the best idea
 var num = "empty";
 var operator;
-var result = 0;
+var result = "";
+var operatorInput = false;
 // Functions for calculator
 function add(num1){
 	console.log("adding");
@@ -32,7 +33,8 @@ function resulting(){
 		case "/":
 			divide(num);
 		break;
-	}	
+	}
+	operatorInput = false;	
 }
 // Setup eventListeners
 var numbers = document.getElementsByClassName("number");
@@ -44,28 +46,34 @@ var display = document.getElementsByClassName("display")[0];
 equal[0].addEventListener("click",function(){
 	console.log(this.value + " was clicked");
 	console.log(result);
+	num = parseInt(num);
+	resulting();
 	display.value = result;
+	num = "";
+
 })
 
 clear[0].addEventListener("click",function(){
 	console.log(this.value + " was clicked");
-	result = 0;
+	result = "";
 	num = "empty";
+	operator = false;
 	console.log(result);
-	display.value = result;
+	display.value = 0;
 })
 
 for(var i = 0; i<numbers.length;i++){
 		var b = numbers[i];
 		b.addEventListener("click",function(event){
 			console.log(this.value + " was clicked");
-			display.value = this.value;
 			if(num === "empty"){
-				result = parseInt(this.value);
-				num = 0;
+				result += this.value;
+				console.log("result " + result);
+				display.value = result;
 			}else{
-				num = parseInt(this.value);
-				resulting();
+				num += this.value;
+				console.log("num " + num)
+				display.value = num;
 			}		
 
 		})
@@ -74,6 +82,10 @@ for(var i = 0; i<operators.length;i++){
 		var b = operators[i];
 		b.addEventListener("click",function(event){
 			display.value = this.value;
+			if(num === "empty"){
+				result = parseInt(result);
+				num = "";
+			}
 			console.log(this.value + " was clicked");
 			operator = this.value;
 		})
