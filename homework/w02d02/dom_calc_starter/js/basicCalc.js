@@ -44,6 +44,7 @@ var display = document.getElementsByClassName("display")[0];
 equal[0].addEventListener("click",function(){
 	console.log(this.value + " was clicked");
 	console.log(result);
+	display.value = result;
 })
 
 clear[0].addEventListener("click",function(){
@@ -51,12 +52,14 @@ clear[0].addEventListener("click",function(){
 	result = 0;
 	num = "empty";
 	console.log(result);
+	display.value = result;
 })
 
 for(var i = 0; i<numbers.length;i++){
 		var b = numbers[i];
 		b.addEventListener("click",function(event){
 			console.log(this.value + " was clicked");
+			display.value = this.value;
 			if(num === "empty"){
 				result = parseInt(this.value);
 				num = 0;
@@ -70,6 +73,7 @@ for(var i = 0; i<numbers.length;i++){
 for(var i = 0; i<operators.length;i++){
 		var b = operators[i];
 		b.addEventListener("click",function(event){
+			display.value = this.value;
 			console.log(this.value + " was clicked");
 			operator = this.value;
 		})
