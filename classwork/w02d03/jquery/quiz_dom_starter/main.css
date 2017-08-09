@@ -1,0 +1,26 @@
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  display: inline-block;
+}
+
+.important {
+  color: red;
+  font-weight: 900;
+}
+
+.border-heavy {
+  padding: 7px;
+  border: solid black 5px;
+  border-radius: 5px;
+}
+
+.green {
+  color: green;
+}
+
+.bold {
+  font-weight: 900;
+}
