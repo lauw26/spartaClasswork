@@ -25,3 +25,13 @@ end
 get "/:id/edit" do
 	"edit certain thing"	
 end
+
+# update certain thing using put
+put "/:id" do
+	"update certain thing with put"	
+end
+
+# update certain thing using patch
+patch "/:id" do
+	"update certain thing with patch"	
+end
