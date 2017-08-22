@@ -35,3 +35,8 @@ end
 patch "/:id" do
 	"update certain thing with patch"	
 end
+
+# delete certain thing using delete
+delete "/:id" do
+	"delete certain thing"	
+end
