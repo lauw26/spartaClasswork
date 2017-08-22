@@ -112,7 +112,6 @@ def trip_calc
 	puts "Your trip will take #{time} hours and cost #{cost} pounds"
 
 end
-
 while $continue 
 	puts "1 for basic calc"
 	puts "2 for advanced calc"
