@@ -11,7 +11,12 @@ get "/" do
 	"index"	
 end
 
-# Show to get a certain element
+# get a certain thing
 get "/:id" do
-	"display id element"	
+	"display id thing"	
+end
+
+# use post to create new thing
+post "/" do
+	"creating new thing"	
 end
