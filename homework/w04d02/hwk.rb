@@ -20,3 +20,8 @@ end
 post "/" do
 	"creating new thing"	
 end
+
+# edit a certain thing using id
+get "/:id/edit" do
+	"edit certain thing"	
+end
