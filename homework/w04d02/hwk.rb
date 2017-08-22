@@ -8,5 +8,10 @@ end
 
 # Index to show using get
 get "/" do
-	"Show display"	
+	"index"	
+end
+
+# Show to get a certain element
+get "/:id" do
+	"display id element"	
 end
