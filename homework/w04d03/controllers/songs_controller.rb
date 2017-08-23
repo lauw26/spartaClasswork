@@ -1,4 +1,4 @@
-class PostsController < Sinatra::Base
+class SongsController < Sinatra::Base
 	# array of objects to be posted on website
 	# $posts = [
 	# 	{
@@ -24,5 +24,37 @@ class PostsController < Sinatra::Base
 	# sets the view directory correctly
 	# adds veiws to root to make /views
 	set :views, Proc.new{ File.join(root, "views") }
+
+	configure :development do
+		register Sinatra::Reloader
+	end
+
+	get "/" do
+		erb :"host/index"
+	end
+	
+	get "/new" do
+		
+	end
+
+	get "/:id" do
+
+	end
+
+	post "/" do
+
+	end
+
+	put "/:id" do
+		
+	end
+
+	delete "/:id" do
+
+	end
+
+	get "/:id/edit" do
+
+	end
 
 end
