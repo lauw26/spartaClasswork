@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "sinatra"
+gem "sinatra-reloader"
+gem "rack"
+
+# use bundle exec rackup to use gem commands
+# use source ~/.bash_profile if cannot install
