@@ -4,6 +4,7 @@ require_relative "songs.rb"
 class SongsController < Sinatra::Base
 	# array of objects to be posted on website
 	$songs = []
+	#Defualt songs placed in already
 	song1 = Song.new($songs.length,"Despacito",5,"Luis Fonsi & Daddy Yankee Featuring Justin Bieber")
 	$songs.push(song1)
 	song2 = Song.new($songs.length,"Wild Thoughts",4,"DJ Khaled Featuring Rihanna & Bryson Tiller")
@@ -32,10 +33,12 @@ class SongsController < Sinatra::Base
 	# get "/new" do
 		
 	# end
-
-	# get "/:id" do
-
-	# end
+	# shows song clicked
+	get "/:id" do
+		@id = params[:id]
+		@obj = $songs[@id.to_i]
+		erb :"host/show"
+	end
 
 	# post "/" do
 
