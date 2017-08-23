@@ -25,7 +25,7 @@ class SongsController < Sinatra::Base
 		@title = "Ollie is sick"
 		
 		# sort rating by ranking
-		$songs.sort_by {|obj| obj.rating}
+		$songs.sort_by {|obj| obj.rating.to_i}
 
 		@songs = $songs
 		erb :"host/index"
@@ -39,13 +39,23 @@ class SongsController < Sinatra::Base
 	# shows song clicked
 	get "/:id" do
 		@id = params[:id]
+		@songs = $songs
 		@obj = $songs[@id.to_i]
 		erb :"host/show"
 	end
 
-	# post "/" do
+	#Create and display song
+	post "/" do
+		id = $songs.length
+		name = params[:name]
+		rating = params[:rating]
+		artists = params[:artist]
 
-	# end
+		new_song = Song.new(id,name,rating,artists)
+		$songs.push(new_song)
+		redirect "/"
+
+	end
 
 	# put "/:id" do
 		
