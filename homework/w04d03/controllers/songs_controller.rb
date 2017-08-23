@@ -25,7 +25,9 @@ class SongsController < Sinatra::Base
 		@title = "Ollie is sick"
 		
 		# sort rating by ranking
-		$songs.sort_by {|obj| obj.rating.to_i}
+		$songs.sort_by {|song| song.rating.to_i}
+		puts $songs[0].name
+		puts $songs[1].name
 
 		@songs = $songs
 		erb :"host/index"
