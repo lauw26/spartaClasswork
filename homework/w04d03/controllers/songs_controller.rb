@@ -24,15 +24,18 @@ class SongsController < Sinatra::Base
 	get "/" do
 		@title = "Ollie is sick"
 		
-		
+		# sort rating by ranking
+		$songs.sort_by {|obj| obj.rating}
 
 		@songs = $songs
 		erb :"host/index"
 	end
 	
-	# get "/new" do
-		
-	# end
+	get "/new" do
+		@action = "/"
+		@method = "post"
+		erb :"host/new"
+	end
 	# shows song clicked
 	get "/:id" do
 		@id = params[:id]
