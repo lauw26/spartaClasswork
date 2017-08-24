@@ -1,9 +1,11 @@
 <!-- yield in layout.rb is where the elements below is placed  -->
-<h3><%= @pokemon.name %></h3>
-<h2>#<%= @pokemon.id %></h2>
-<p>Type: <%= @pokemon.type %></p>
-<p>Location: <%= @pokemon.location %></p>
-<p>Description: <%= @pokemon.description %></p>
-<a href= "<%= @pokemon.id %>/edit">
-	<button>Click to edit</button>
-</a>
+<div>
+	<h3><%= @pokemon.name %></h3>
+	<h2>#<%= @pokemon.id %></h2>
+	<p>Type: <%= @pokemon.type %></p>
+	<p>Location: <%= @pokemon.location %></p>
+	<p>Description: <%= @pokemon.description %></p>
+	<a href= "<%= @pokemon.id %>/edit">
+		<button>Click to edit</button>
+	</a>
+</div>
