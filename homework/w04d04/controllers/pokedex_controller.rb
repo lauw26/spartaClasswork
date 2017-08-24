@@ -16,6 +16,8 @@ class PokedexController < Sinatra::Base
 
 	get "/" do
 		"INDEX"
+		# to be used for index 
+		@title = "Pokedex"
 	end
 	
 	get "/new" do
