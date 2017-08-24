@@ -1,7 +1,11 @@
 <form action="/<%= @pokemon.id  %>" method = "POST">
+  <% if(@obj[:id] != "") %>
+    <input type="hidden" name="_method" value="PUT">
+  <% end %>
+
   <div class="form-group">
     <label for="exampleFormControlInput1">Index</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter index of pokemon" name="id">
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter index of pokemon" name="id" value = "<%= @pokemon.id %>">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Name</label>
