@@ -18,6 +18,7 @@ class PokedexController < Sinatra::Base
 		"INDEX"
 		# to be used for index 
 		@title = "Pokedex"
+		erb :"host/index"
 	end
 	
 	get "/new" do
