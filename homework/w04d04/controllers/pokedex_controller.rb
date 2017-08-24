@@ -51,8 +51,19 @@ class PokedexController < Sinatra::Base
 		redirect "/"
 		
 	end
-
+	#Update existing pokemon
 	put "/:id" do
+		id = params[:id].to_i - 1
+		pokemon = $pokemons[id]
+		pokemon.id = params[:id]
+		pokemon.name = params[:name]
+		pokemon.type = params[:type]
+		pokemon.location = params[:location]
+		pokemon.description = params[:description]
+
+		pokemon = $pokemons[id]
+
+		redirect "/"
 		
 	end
 
