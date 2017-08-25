@@ -8,4 +8,9 @@
 	<a href= "<%= @pokemon.id %>/edit">
 		<button>Click to edit</button>
 	</a>
+	<!-- always use post then input to change commands -->
+	<form action="/<%= @pokemon.id  %>" method = "POST">
+		<input type="hidden" name="_method" value="DELETE">
+		<input type="submit" value="Delete">
+	</form>
 </div>
