@@ -69,9 +69,14 @@ class PokedexController < Sinatra::Base
 		redirect "/"
 		
 	end
-
+	#delete a pokemon
 	delete "/:id" do
-		
+		id = params[:id].to_i
+
+		#delete hash object from array
+		$pokemons.delete_at(id)
+		#Redirect to homepage
+		redirect "/"
 	end
 	#edit pokemon
 	get "/:id/edit" do
