@@ -13,15 +13,16 @@
 	background-attachment: fixed;
 }
 
-.navColor{
-	background-color: #092949;
-
+.contentColor{
+	background-color: #425363;
+	height: 60vh;
 
 }
 
-.inline{
-	display: inline-block;
-} 
+.navColor{
+	background-color: #092949;
+}
+
 .navbar-default {
   background: #000000;
 }
