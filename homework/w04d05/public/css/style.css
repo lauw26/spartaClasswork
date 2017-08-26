@@ -16,7 +16,12 @@
 .navColor{
 	background-color: #092949;
 
+
 }
+
+.inline{
+	display: inline-block;
+} 
 .navbar-default {
   background: #000000;
 }
