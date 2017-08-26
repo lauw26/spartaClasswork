@@ -17,11 +17,24 @@ class 	ChampionsController < Sinatra::Base
   	end
   	# Shows the content of a specific object in db
   	get '/:id' do
-  		"SHOW"
+  		"SHOW #{params[:id]}"
   	end 
   	# Takes user input from form and adds data as new entry
   	post '/' do
   		"CREATE"
   	end
+  	# Updating exisiting data by setting them to new data then saving it and redirecting  
+  	put '/:id'  do
+  		"UPDATE #{params[:id]}"
+  	end
+  	# Deletes a entry in db using entry id
+  	delete '/:id'  do
+  		"DELETE #{params[:id]}"
+  	end
+  	# Retrieves form along with specific object data on it for user to make changes
+  	get '/:id/edit'  do
+  		"EDIT #{params[:id]}"
+  	end
+
 
 end
