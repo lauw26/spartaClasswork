@@ -10,6 +10,8 @@ class 	ChampionsController < Sinatra::Base
   	# Home/index showing the contents of db
   	get '/' do
   		"INDEX"
+  		# Takes user to index
+  		erb :'posts/index'
   	end
   	# Retreieves a form for user to add entry into db
   	get '/new'  do
