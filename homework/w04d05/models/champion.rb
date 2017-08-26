@@ -57,4 +57,10 @@ class Champion
 		end
 		conn.exec(sql)
 	end
+	# Destroy or delete row based on id 
+	def self.destroy id
+		conn = self.open_connection
+		sql = "DELETE FROM post WHERE id='#{id}'"
+		conn.exec(sql)
+	end
 end
