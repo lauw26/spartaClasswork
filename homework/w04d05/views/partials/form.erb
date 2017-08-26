@@ -3,14 +3,42 @@
 		<input type="hidden" name="_method" value="PUT">
 	<% end %>
 	<div>
-		<label>Title</label>
-		<input type="text" name="title" placeholder="Enter a Title" value="<%= @post.title %>">
+		<label>Name</label>
+		<input type="text" name="name" placeholder="Enter champion name" value="<%= @champion.name %>">
 	</div>
 	<div>
-		<label>Content</label>
-		<textarea name="body" placeholder="The Content"><%= @post.body %></textarea>
+		<label>Postion</label>
+		<input type="text" name="Postion" placeholder="Enter champion position" value="<%= @champion.position %>">
 	</div>
 	<div>
-		<input type="submit" value="Save Post">
+		<label>Cost</label>
+		<input type="text" name="cost" placeholder="Enter champion cost" value="<%= @champion.cost %>">
+	</div>
+	<div>
+		<label>Passive</label>
+		<input type="text" name="passive" placeholder="Enter champion passive" value="<%= @champion.passive %>">
+	</div>
+	<div>
+		<label>First Ability</label>
+		<input type="text" name="ability1" placeholder="Enter champion first ability" value="<%= @champion.ability1 %>">
+	</div>
+	<div>
+		<label>Second Ability</label>
+		<input type="text" name="ability2" placeholder="Enter champion second ability" value="<%= @champion.ability2 %>">
+	</div>
+	<div>
+		<label>Third Ability</label>
+		<input type="text" name="ability3" placeholder="Enter champion third ability" value="<%= @champion.ability3 %>">
+	</div>
+	<div>
+		<label>Ultimate</label>
+		<input type="text" name="ultimate" placeholder="Enter champion ultimate" value="<%= @champion.ultimate %>">
+	</div>
+	<div>
+		<label>Lore</label>
+		<textarea name="lore" placeholder="Champion lore"><%= @champion.lore %></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Save Champion">
 	</div>
 </form>
