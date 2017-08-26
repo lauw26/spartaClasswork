@@ -50,10 +50,10 @@ class Champion
 		conn = Post.open_connection
 		#if there is no id then make new entry
 		if(!self.id)
-			sql = "INSERT INTO champion (title, body) VALUES ('#{self.title}','#{self.body}')"
+			sql = "INSERT INTO champion (name, position, cost, passive, ability1, ability2, ability3, ultimate, lore ) VALUES ('#{self.name}','#{self.position}','#{self.cost}',,'#{self.passive}','#{self.ability1}','#{self.ability2}','#{self.ability3}','#{self.ultimate}','#{self.lore}')"
 		else
 			# updates using id if id exist
-			sql = "UPDATE post SET title='#{self.title}', body='#{self.body}' WHERE id=#{self.id}"
+			sql = "UPDATE champion SET name='#{self.name}', position='#{self.position}',cost='#{self.cost}',passive='#{self.passive}',ability1='#{self.ability1}',ability2='#{self.ability2}',ability3='#{self.ability3}',ultimate='#{self.ultimate}',lore='#{self.lore}' WHERE id=#{self.id}"
 		end
 		conn.exec(sql)
 	end
