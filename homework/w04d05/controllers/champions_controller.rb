@@ -37,7 +37,22 @@ class 	ChampionsController < Sinatra::Base
   	end 
   	# Takes user input from form and adds data as new entry
   	post '/' do
-  		"CREATE"
+  		# "CREATE"
+  		champion = Champion.new
+  		champion.name = params[:name]
+  		champion.position = params[:position]
+  		champion.cost = params[:cost].to_i
+  		champion.passive = params[:passive]
+  		champion.ability1 = params[:ability1]
+  		champion.ability2 = params[:ability2]
+  		champion.ability3 = params[:ability3]
+  		champion.ultimate = params[:ultimate]
+  		champion.lore = params[:lore]
+
+  		champion.save
+
+  		redirect "/"
+
   	end
   	# Updating exisiting data by setting them to new data then saving it and redirecting  
   	put '/:id'  do
