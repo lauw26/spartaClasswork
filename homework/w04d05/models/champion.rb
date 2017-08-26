@@ -47,10 +47,10 @@ class Champion
 	end
 	# Saves new entry and inputs to database since it static and a instance has been created have to use (instance name).connect rather than self.connect
 	def save 
-		conn = Post.open_connection
+		conn = Champion.open_connection
 		#if there is no id then make new entry
 		if(!self.id)
-			sql = "INSERT INTO champion (name, position, cost, passive, ability1, ability2, ability3, ultimate, lore ) VALUES ('#{self.name}','#{self.position}','#{self.cost}',,'#{self.passive}','#{self.ability1}','#{self.ability2}','#{self.ability3}','#{self.ultimate}','#{self.lore}')"
+			sql = "INSERT INTO champion (name, position, cost, passive, ability1, ability2, ability3, ultimate, lore ) VALUES ('#{self.name}', '#{self.position}', '#{self.cost}', '#{self.passive}', '#{self.ability1}', '#{self.ability2}', '#{self.ability3}', '#{self.ultimate}', '#{self.lore}')"
 		else
 			# updates using id if id exist
 			sql = "UPDATE champion SET name='#{self.name}', position='#{self.position}',cost='#{self.cost}',passive='#{self.passive}',ability1='#{self.ability1}',ability2='#{self.ability2}',ability3='#{self.ability3}',ultimate='#{self.ultimate}',lore='#{self.lore}' WHERE id=#{self.id}"
