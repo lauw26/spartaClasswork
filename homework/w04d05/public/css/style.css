@@ -26,3 +26,8 @@
 .navbar-default {
   background: #000000;
 }
+
+.boxColor{
+	background-color: #848B8C;
+	border-radius: 25px;
+}
