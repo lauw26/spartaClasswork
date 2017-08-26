@@ -1,5 +1,5 @@
 .title{
-	background-color: #092949;
+	background-color: black;
 	color: #C69F3F;
 	text-align: center;
 	font-family: Friz Quadrata;
@@ -11,4 +11,12 @@
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	background-attachment: fixed;
+}
+
+.navColor{
+	background-color: #092949;
+
+}
+.navbar-default {
+  background: #000000;
 }
