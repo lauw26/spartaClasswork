@@ -14,9 +14,8 @@
 }
 
 .contentColor{
-	background-color: #425363;
-	height: 60vh;
-	opacity: 0.5;
+	background-color: rgba(66, 83, 99, 0.7);
+	height: 80vh;
 
 }
 

@@ -9,13 +9,27 @@ class 	ChampionsController < Sinatra::Base
   	end
   	# Home/index showing the contents of db
   	get '/' do
-  		"INDEX"
+  		# "INDEX"
+  		@champions = Champion.all
   		# Takes user to index
   		erb :'posts/index'
   	end
   	# Retreieves a form for user to add entry into db
   	get '/new'  do
-  		"NEW"
+  		# "NEW"
+  		@champion = Champion.new
+  		@champion.id = ""
+  		@champion.name = ""
+  		@champion.position = ""
+  		@champion.cost = 
+  		@champion.passive = ""
+  		@champion.ability1 = ""
+  		@champion.ability2 = ""
+  		@champion.ability3 = ""
+  		@champion.ultimate = ""
+  		@champion.lore = ""
+  		#Take user to form for new entry
+  		erb :"posts/new"
   	end
   	# Shows the content of a specific object in db
   	get '/:id' do
