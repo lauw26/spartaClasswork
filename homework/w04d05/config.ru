@@ -10,4 +10,4 @@ use Rack::Reloader
 # overrides the data currently stored
 use Rack::MethodOverride
 
-run ChampionsConstroller
+run ChampionsController
