@@ -6,8 +6,10 @@
 	<div class="col-md-8 boxColor">
 		<div class="boxMove">
 			<h2><%= @champion.name %></h2>
-			<p><h4>Position:</h4> <%= @champion.position %></p>
-			<p><h4>Cost:</h4> <%= @champion.cost %></p>
+			<p><strong>Position:</strong> <%= @champion.position %></p>
+			<p><strong>Cost:</strong> <%= @champion.cost %> ip</p>
+			<%= erb(:'partials/ability_table') %>
+			<%= erb(:'partials/lore_modal') %>
 		</div>
 	</div>
 	<div class="col-md-2"></div>

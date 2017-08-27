@@ -33,7 +33,11 @@ class 	ChampionsController < Sinatra::Base
   	end
   	# Shows the content of a specific object in db
   	get '/:id' do
-  		"SHOW #{params[:id]}"
+  		# "SHOW #{params[:id]}"
+  		id = params[:id].to_i
+  		# make a single post object available in the show url
+  		@champion = Champion.find id
+  		erb :'posts/show'
   	end 
   	# Takes user input from form and adds data as new entry
   	post '/' do
@@ -47,7 +51,11 @@ class 	ChampionsController < Sinatra::Base
   		champion.ability2 = params[:ability2]
   		champion.ability3 = params[:ability3]
   		champion.ultimate = params[:ultimate]
-  		champion.lore = params[:lore]
+  		lore = params[:lore]
+  		if lore.include? "'"
+   			cal_name.sub!("'", "''")
+		end
+  		champion.lore = lore
 
   		champion.save
 
