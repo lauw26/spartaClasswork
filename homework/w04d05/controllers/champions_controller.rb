@@ -65,7 +65,27 @@ class 	ChampionsController < Sinatra::Base
   	end
   	# Updating exisiting data by setting them to new data then saving it and redirecting  
   	put '/:id'  do
-  		"UPDATE #{params[:id]}"
+  		# "UPDATE #{params[:id]}"
+  		id = params[:id].to_i
+	    champion = Champion.find id 
+	    champion.name = params[:name]
+  		champion.position = params[:position]
+  		champion.cost = params[:cost].to_i
+  		champion.passive = params[:passive]
+  		champion.ability1 = params[:ability1]
+  		champion.ability2 = params[:ability2]
+  		champion.ability3 = params[:ability3]
+  		champion.ultimate = params[:ultimate]
+  		# Allows large text with ' to be saved by replacing it with two ''
+  		lore = params[:lore]
+  		if lore.include? "'"
+   			lore.gsub("'"){"\\'"}
+		end
+  		champion.lore = lore
+
+  		champion.save
+
+	    redirect "/"
   	end
   	# Deletes a entry in db using entry id
   	delete '/:id'  do
