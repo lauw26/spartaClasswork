@@ -73,7 +73,12 @@ class 	ChampionsController < Sinatra::Base
   	end
   	# Retrieves form along with specific object data on it for user to make changes
   	get '/:id/edit'  do
-  		"EDIT #{params[:id]}"
+  		# "EDIT #{params[:id]}"
+  		id = params[:id].to_i
+    	# make a single post object available in the template
+    	@champion = Champion.find id
+    	# Display edit url page
+    	erb :'posts/edit'
   	end
 
 
