@@ -87,9 +87,12 @@ class 	ChampionsController < Sinatra::Base
 
 	    redirect "/"
   	end
-  	# Deletes a entry in db using entry id
+  	# Deletes a entry in db using id
   	delete '/:id'  do
-  		"DELETE #{params[:id]}"
+  		# "DELETE #{params[:id]}"
+  		id = params[:id].to_i
+    	Champion.destroy id
+    	redirect "/"
   	end
   	# Retrieves form along with specific object data on it for user to make changes
   	get '/:id/edit'  do
