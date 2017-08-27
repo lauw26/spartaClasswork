@@ -51,9 +51,10 @@ class 	ChampionsController < Sinatra::Base
   		champion.ability2 = params[:ability2]
   		champion.ability3 = params[:ability3]
   		champion.ultimate = params[:ultimate]
+  		# Allows large text with ' to be saved by replacing it with two ''
   		lore = params[:lore]
   		if lore.include? "'"
-   			cal_name.sub!("'", "''")
+   			lore.gsub("'"){"\\'"}
 		end
   		champion.lore = lore
 
