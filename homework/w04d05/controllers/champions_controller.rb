@@ -54,7 +54,7 @@ class 	ChampionsController < Sinatra::Base
   		# Allows large text with ' to be saved by replacing it with two ''
   		lore = params[:lore]
   		if lore.include? "'"
-   			lore.gsub("'"){"\\'"}
+   			lore.gsub! "'", "''"
 		end
   		champion.lore = lore
 
@@ -79,7 +79,7 @@ class 	ChampionsController < Sinatra::Base
   		# Allows large text with ' to be saved by replacing it with two ''
   		lore = params[:lore]
   		if lore.include? "'"
-   			lore.gsub("'"){"\\'"}
+   			lore.gsub! "'", "''"
 		end
   		champion.lore = lore
 
