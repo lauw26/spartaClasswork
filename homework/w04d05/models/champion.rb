@@ -45,6 +45,16 @@ class Champion
 		champion
 
 	end
+	#Find the id by name
+	def self.findName searchName
+		conn = self.open_connection
+		sql = "SELECT id FROM champion WHERE 'name' = '#{searchName}' LIMIT 1"
+		champions = conn.exec(sql)
+		# champion = self.hydrate champions[0]
+		data['id']
+		# champion
+
+	end
 	# Saves new entry and inputs to database since it static and a instance has been created have to use (instance name).connect rather than self.connect
 	def save 
 		conn = Champion.open_connection
