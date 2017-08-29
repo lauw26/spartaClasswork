@@ -6,9 +6,10 @@
 </p>
 
 <p>
-  <strong>Url:</strong>
-  <%= video_tag @video.url %>
+  <strong>Video:</strong>
 </p>
+
+<iframe width="560" height="315" src="<%= @video.url %>" frameborder="0" allowfullscreen></iframe>
 
 <p>
   <strong>Description:</strong>
@@ -21,7 +22,7 @@
 </p>
 
 <p>
-  <strong>Data:</strong>
+  <strong>Date:</strong>
   <%= @video.data %>
 </p>
 
