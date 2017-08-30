@@ -1,0 +1,15 @@
+<% @champions.each do |champion| %>
+<div class="row">
+	<div class="col-md-12 spacing"></div>
+</div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10 boxColor">
+		<div class="boxMove">
+			<h3><a href="/<%= champion.id %>"><%= champion.name %></a></h3>
+  			<p>Position: <%= champion.position %> </p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<% end %>

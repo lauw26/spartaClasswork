@@ -1,0 +1,36 @@
+.title{
+	color: #FBFFA3;
+	font-family: Friz Quadrata;
+	font-size: 100px;
+	background-image: url("../pictures/Heimerdinger_header.jpg");
+	background-size: 100% 100%;
+}
+
+.background{
+	background-image: url("../pictures/background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-attachment: fixed;
+}
+
+.bodyColor{
+	background-color: rgba(66, 83, 99, 0.7);
+
+}
+
+.navColor{
+	background-color: #092949;
+}
+
+.navbar-default {
+  background: #000000;
+}
+
+.boxColor{
+	background-color: #848B8C;
+	border-radius: 25px;
+}
+
+.spacing{
+	height: 2vh;
+}

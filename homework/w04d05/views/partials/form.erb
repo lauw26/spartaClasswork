@@ -1,0 +1,44 @@
+<form action="/<%= @champion.id %>" method="POST">
+	<% if(@champion.id != "") %>
+		<input type="hidden" name="_method" value="PUT">
+	<% end %>
+	<div>
+		<h5>Name</h5>
+		<input type="text" name="name" placeholder="Enter name" value="<%= @champion.name %>">
+	</div>
+	<div>
+		<h5>Position</h5>
+		<input type="text" name="position" placeholder="Enter position" value="<%= @champion.position %>">
+	</div>
+	<div>
+		<h5>Cost</h5>
+		<input type="text" name="cost" placeholder="Enter cost" value="<%= @champion.cost %>">
+	</div>
+	<div>
+		<h5>Passive</h5>
+		<input type="text" name="passive" placeholder="Enter passive" value="<%= @champion.passive %>">
+	</div>
+	<div>
+		<h5>First Ability</h5>
+		<input type="text" name="ability1" placeholder="Enter first ability" value="<%= @champion.ability1 %>">
+	</div>
+	<div>
+		<h5>Second Ability</h5>
+		<input type="text" name="ability2" placeholder="Enter second ability" value="<%= @champion.ability2 %>">
+	</div>
+	<div>
+		<h5>Third Ability</h5>
+		<input type="text" name="ability3" placeholder="Enter third ability" value="<%= @champion.ability3 %>">
+	</div>
+	<div>
+		<h5>Ultimate</h5>
+		<input type="text" name="ultimate" placeholder="Enter ultimate" value="<%= @champion.ultimate %>">
+	</div>
+	<div>
+		<h5>Lore</h5>
+		<textarea name="lore" placeholder="Champion lore"><%= @champion.lore %></textarea>
+	</div>
+	<div>
+		<input type="submit" value="Save Champion" class="btn btn-success">
+	</div>
+</form>

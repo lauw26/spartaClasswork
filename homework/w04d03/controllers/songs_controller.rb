@@ -25,11 +25,11 @@ class SongsController < Sinatra::Base
 		@title = "Ollie is sick"
 		
 		# sort rating by ranking
-		$songs.sort_by {|song| song.rating.to_i}
+		@songs = $songs.sort_by {|song| song.rating.to_i * -1}
 		puts $songs[0].name
 		puts $songs[1].name
 
-		@songs = $songs
+		# @songs = $songs
 		erb :"host/index"
 	end
 	
