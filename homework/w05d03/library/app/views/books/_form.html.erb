@@ -17,15 +17,13 @@
   </div>
 
   <div class="field">
-    <%= form.label :author_id %>
-    <%= form.number_field :author_id, id: :book_author_id %>
-  </div>
-
-  <%= form.select(:author_id) do %>
-    <% @authorShow.each do |authorShow| -%>
-      <%= content_tag(:option, authorShow.first, value: authorShow.last) %>
+    <%= form.label :Author%>
+    <%= form.select(:author_id) do %>
+      <% @authorShow.each do |authorShow| -%>
+        <%= content_tag(:option, authorShow.first, value: authorShow.last) %>
+      <% end %>
     <% end %>
-  <% end %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
