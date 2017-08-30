@@ -1,12 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Author Name:</strong>
   <%= @author.name %>
 </p>
-
+<strong>Books</strong>
 <% @books.each do |book| %>
 	<h3><a href="http://localhost:3000/books/<%= book.id %>"><%= book.title %></a></h3>
 <% end %>
+<%= link_to 'New Book', new_book_path %>
 <%= link_to 'Edit', edit_author_path(@author) %> |
 <%= link_to 'Back', authors_path %>
