@@ -7,7 +7,7 @@
 
 <p>
   <strong>Author:</strong>
-  <%= @book.author_id %>
+  <a href="http://localhost:3000/authors/<%= @author.id %>"><%= @author.name %></a>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

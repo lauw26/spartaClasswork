@@ -10,15 +10,34 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @author = @book.author
   end
 
   # GET /books/new
   def new
     @book = Book.new
+    authors = Author.all
+    @author = authors[0]
+    @authorShow = []
+    authors.each do |author|
+      bookAuthor = []
+      bookAuthor.push(author.name, author.id)
+      @authorShow.push(bookAuthor)
+    end
+
   end
 
   # GET /books/1/edit
   def edit
+    authors = Author.all
+    @author = authors[0]
+    @authorShow = []
+    authors.each do |author|
+      bookAuthor = []
+      bookAuthor.push(author.name, author.id)
+      @authorShow.push(bookAuthor)
+    end
+
   end
 
   # POST /books

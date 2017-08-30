@@ -21,6 +21,12 @@
     <%= form.number_field :author_id, id: :book_author_id %>
   </div>
 
+  <%= form.select(:author_id) do %>
+    <% @authorShow.each do |authorShow| -%>
+      <%= content_tag(:option, authorShow.first, value: authorShow.last) %>
+    <% end %>
+  <% end %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
