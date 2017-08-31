@@ -1,0 +1,14 @@
+<h3>Home Sweet Home</h3>
+<!-- checks if user has signed in -->
+<% if user_signed_in? %>
+	<!-- if yes then display logged in email and edit ad destroy -->
+	Logged in as <%= current_user.email %>
+	<%= link_to 'Edit profile', edit_user_registration_path %>
+	<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+
+<% else %>
+	Your not currently signed in
+	<%= link_to 'Login', new_user_session_path %>
+	<%= link_to 'Sign up', new_user_registration_path %>
+
+<% end %>	
