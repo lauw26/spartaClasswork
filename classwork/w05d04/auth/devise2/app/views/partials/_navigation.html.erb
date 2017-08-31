@@ -13,7 +13,8 @@
 	      <li><span class="glyphicon glyphicon-user"></span><%= link_to 'Edit profile', edit_user_registration_path %></li>
 	      <li><span class="glyphicon glyphicon-log-in"></span><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
 	      <li><%= link_to 'Posts', posts_path %></li>
-	      <li><%= link_to 'Users', users_path %></li>
+	      <li><%= link_to "My Posts", user_path(current_user.id) %></li>
+	      <li><%= link_to 'User', users_path %></li>
 	    </ul>
 	<% else %>
 		<ul class="nav navbar-nav navbar-right">
