@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   root 'static#home'
-  get '/user/:id' => 'users#show'
+  get '/users/:id' => 'users#show'
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
